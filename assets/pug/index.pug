@@ -1,0 +1,196 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.home 
+		.home__background
+			.section_in
+				.home__wrapper
+					.home__informBlock
+						.home__title 
+							h1 ZUMBA FiTNESS 
+						.home__text танцуй под латинскую музыку, сжигай калорий и получай заряд бодрости на всю неделю!
+	
+	.mainBackground
+		section.form
+			.section_in 
+				.contactForm 
+					.contactForm__title Запишись на первое занятие 
+					.contactForm__title БЕСПЛАТНО
+
+					.contactForm__block 
+						input.contactForm__input(type="text" placeholder="Имя")
+						input.contactForm__input(type="text" placeholder="Телефон")
+						.contactForm__button.button
+							.button__link Записаться
+					.contactForm__checkBlock
+						input(type="checkbox" id="check")
+						label(for="check") Согласен на обработку персональных данных
+			
+			.section_in#aboutUs  
+				.aboutUs
+					.aboutUs__row 
+						.aboutUs__col-left
+							.aboutUs__img 
+								img(src="i/about_zumba.png", alt="")
+						.aboutUs__col-right
+							.aboutUs__text-style
+								.aboutUs__title.titleBlock ЧТО ТАКОЕ Zumba?
+								.aboutUs__text <span>Зумба</span> – это групповой фитнес-урок, сочетающий в себе простые элементы латино, хип-хопа, шаги из классической аэробики и базовую хореографию. Справится любой человек, даже если он никогда не занимался танцами.
+
+							.aboutUs__titleList
+								.text-uppercase На зумбе можно:
+
+								ul.aboutUs__serviceList 
+									-for(i = 1; i < 5; i++)
+										- title = ['','танцевать, даже если <br> совсем не умеешь', 'отрываться, если нет времени на вечеринки', 'сбрасывать негатив', 'тратить калории, не вспоминая о дорожке и часах нудных фитнес тренировок']
+										- src = 'i/icon' + i + '.svg'
+										li.aboutUs__blockList
+											img(src=`${src}`, alt="")
+											p.aboutUs__serviceItem!=title[i]
+								
+								.aboutUs__textBlock
+									p.text-uppercase Каждая тренировка длится в среднем 1 час. 
+									p Сколько раз в неделю заниматься? Все зависит от вашей подготовленности и желания тренироваться – для того, чтобы похудеть, одного раза в неделю, естественно будет мало, а вот для поддержания тела в тонусе – вполне хватит.
+									p В <span>Zumba Fitness </span>основной смысл заключается в первую очередь в удовольствии. Здесь нет места скуке, печали и монотонности. Это настоящий фитнес для развлечения и здоровья. 
+											
+
+			.section_in 
+				.blockRegister 
+					.blockRegister__text.text-uppercase Единственное, что требуется 
+					.blockRegister__text это кроссовки, спортивная форма и запись на пробное бесплатное занятие! 
+					.blockRegister__button.button
+						.button__link Записаться
+
+			.section_in 
+				.blockVideo#video
+					.blockVideo__title.titleBlock Зумба наглядно <br> от создателя Альберто Переса 
+					.blockVideo__text В гостях у Ивана Урганта на «Первом канале» 
+					.blockVideo__video 
+						img(src="i/video.jpg", alt="")
+
+			.section_in 
+				.blockReasons#advant
+					.blockReasons__title 	
+						.blockReasons__num-title 8
+						.blockReasons__textBlock
+							.blockReasons__text ПРИЧИН 
+							.blockReasons__text-style ЗАНЯТЬСЯ ЗУМБОЙ
+							
+					.blockReasons__col
+						.blockReasons__col-girl 
+							img(src="i/girl.png", alt="")
+						
+						.blockReasons__row 
+							.blockReasons__col
+								.blockReasons__list
+									.blockReasons__item.reason-1s
+										.blockReasons__num 1
+										.blockReasons__item-text Занятия подходят абсолютно всем, <br> и для этого не нужен спортивный и танцевальный опыт
+									.blockReasons__item.reason-1s
+										.blockReasons__num 2
+										.blockReasons__item-text <span> Ваше тело станет стройным и подтянутым </span> <br>Активные упражнения улучшают <br> процессы метаболизма <br>и прорабатывают <br>все группы мышц
+									.blockReasons__item.reason-2s
+										.blockReasons__num 3
+										.blockReasons__item-text Занятия <br>в группах 5-20 человек /<br>индивидуальные уроки <br> в любом районе г. Москвы
+									
+
+							.blockReasons__col.blockReasons__col-right
+								.blockReasons__list
+									.blockReasons__item.reason-3s
+										.blockReasons__num 4
+										.blockReasons__item-text Научитесь ритмично двигаться <br> и освоите элементы  <br> различных танцев
+									.blockReasons__item.reason-4s 
+										.blockReasons__num 5
+										.blockReasons__item-text <span> Эмоциональная разгрузка </span> <br> выплесните эмоции, <br> накопившиеся <br> в течение дня
+									.blockReasons__item.reason-5s  
+										.blockReasons__num 6
+										.blockReasons__item-text Зумба аэробика <br>поможет разогреть себя <br>и избавиться <br>от скованности
+									.blockReasons__item.reason-6s 
+										.blockReasons__num 7
+										.blockReasons__item-text <span> Отличная физическая <br> нагрузка </span> <br> сжигание <br> от 500 до 700 калорий <br> за 1 час
+					
+						//- 		-for(i=0; i<3; i++)
+						//- 			-titleReason = ['Занятия подходят абсолютно всем, <br> и для этого не нужен спортивный и танцевальный опыт', '<span class="titleReason-bold"> Ваше тело станет стройным и подтянутым</span> <br> Активные упражнения улучшают процессы метаболизма и прорабатывают все группы мышц', 'занятия <br> в группах по 5-20 человек/индивидуальные уроки в любом районе г.москвы']
+						//- 			-reasonsNum = ['1','2','3']
+						//- 			.blockReasons__box
+						//- 				li.blockReasons__item 
+						//- 					p.blockReasons__num!=reasonsNum[i]
+						//- 					.blockReasons__wrapp
+						//- 						p.blockReasons__item-text!=titleReason[i]
+
+						//- .blockReasons__col.blockReasons__col-girl 
+						//- 	img(src="i/girl.png", alt="")
+						//- .blockReasons__col 
+						//- 	ul.blockReasons__list
+						//- 		-for(i=0; i<4; i++)
+						//- 			-titleReason = ['научитесь ритмочно двигаться и освоите элементы различных танцев','<span class="titleReason-bold">эмоциональная разгрузка</span> <br> выплесните эмоции, накопившиеся<br> в течение дня','зумба аэробика <br> поможет разогреть себя <br> и избавиться от скованности','<span class="titleReason-bold">отличная физическая <br> нагрузка <br></span>сжигание <br> от 500 до 700 калорий <br> за 1 час']
+						//- 			-reasonsNum = ['4','5','6','7']
+						//- 			li.blockReasons__item 
+						//- 				p.blockReasons__num!=reasonsNum[i]
+						//- 				.blockReasons__wrapp
+						//- 					p.blockReasons__item-text!=titleReason[i]
+
+					.blockReasons__end.reasons-endBlock
+						.reasons-endBlock__num 8
+						.reasons-endBlock__text Первое занятие Бесплатно Попробовать очень просто! 
+						.reasons-endBlock__button.button
+							.button__link Попробовать
+
+			.section_in 
+				.blockInstruction#instruct
+					.blockInstruction__row
+						.blockInstruction__col.blockInstruction__col-orderStyle
+							.blockInstruction__box
+								.blockInstruction__title.titleBlock ОБ ИНСТРУКТОРЕ-ПРЕПОДАВАТЕЛЕ
+								.blockInstruction__text 
+									p Привет! Я <span> Марина Хоролова </span> – являюсь преподавателем танцев по направлению Zumba Fitness.
+									p.blockInstruction__s Профессиональная танцовщица, артистка  и хореограф со стажем более 10 лет.
+									p.blockInstruction__s Была призером, лауреатом десятков танцевальных конкурсов и фестивалей. 
+									p.blockInstruction__s2 Победителем районных, городских и областных соревнований. На регулярной основе участвую в благотворительных постановках и организации городских концертов.
+									p.blockInstruction__s3 Помимо всего прочего, опыт только Зумба-фитнессом у меня не ограничивается. Занимаюсь постановкой номеров от стрип-пластики и Frame Up Strip и до свадебного вальса жениха и невесты. <span><br> Да-да и такое тоже есть.</span>
+									p Свои занятия выстраиваю на подаче материала отдельными блоками от простого к сложному, чтобы даже новичок смог быстро освоить новые связки и упражнения. 
+									p <span> Жду вас на первой Бесплатной тренировке! </span>
+						.blockInstruction__col
+							.blockInstruction__img 
+								img(src="i/about.png", alt="")
+					.blockInstruction__button.button
+						.button__link Хочу
+
+			.section_in
+				.blockPrice#price
+					.blockPrice__row
+						.blockPrice__img 
+							img(src="i/dance-img.png", alt="")
+						.blockPrice__bg 
+							.blockPrice__priceInform.priceInform
+								.priceInform__layer
+									.priceInform__title.titleBlock ЦЕНЫ НА ЗАНЯТИЯ В МОСКВЕ
+									.priceInform__sell 
+										.priceInform__num -10%
+										.priceInform__text При оформлении абонемента сразу после пробного занятия
+									.priceInform__sell 
+										.priceInform__num -15%
+										.priceInform__text на любой абонемент, если приведешь друга (подругу)
+
+									ul.priceList
+										li.priceList__item 	Пробное занятие . . . . . . . . . . . . . . . . . <span>БЕСПЛАТНО</span>
+										li.priceList__item 	1 занятие  . . . . . . . . . . . . . . . . . . . . . . . . . . . . <span>600 ₽</span>
+										li.priceList__item 	Абонемент 4 занятия . . . . . . . . . . . . .<span>2 100 ₽</span>
+										li.priceList__item 	Абонемент 8 занятий  . . . . . . . . . . . . <span>4 000 ₽</span>
+										li.priceList__item 	Абонемент 15 занятий . . . . . . . . . . . .<span>7 000 ₽</span>
+										li.priceList__item 	Абонемент 30 занятий . . . . . . . . . . . <span>13 500 ₽</span>
+
+										.priceList__note *Бронь места в зале осуществляется после оставления заявки или записи по телефону								
+
+										li.priceList__item 	Индивидуальное занятие разовое, 1 час . . . . . . . <span>800 ₽</span>
+										li.priceList__item 	3 Индивидуальных занятия по 1 часу . . . . . . . . . . . .<span>5 250 ₽</span>
+										li.priceList__item 	5 Индивидуальных занятий по 1 часу . . . . . . . . . . . .<span>8 500 ₽</span>
+										li.priceList__item 	10 Индивидуальных занятий по 1 часу . . . . . . . . . . .<span>16 500 ₽</span>
+
+										.priceList__note (Место и стоимость аренды зала согласовывается с преподавателем, и не входит в стоимость занятия)
+
+										.priceList__button
+											.button
+												.button__link Записаться
