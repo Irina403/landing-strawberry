@@ -1,26 +1,37 @@
 header 
 	.navbar.fixed-top
 		.section_in
-			.navbar-container.container
-				input(type="checkbox" name="" id="")
-				.hamburger-lines
-					span.line.line1
-					span.line.line2
-					span.line.line3
-				
-				ul.menu-items.menu-toggle-open
-					li.navItem
-						a(href="#aboutUs") О нас
-					li.navItem
-						a(href="#video") Видео
-					li.navItem
-						a(href="#advant") Преимущества
-					li.navItem
-						a(href="#instruct") О преподавателе
-					li.navItem
-						a(href="#price") Цены
-					li.navItem
-						a(href="#contact") Контакты
-						
+			.navbar__flex
+				.navbar-container.container
+					input(type="checkbox" name="" id="")
+					.hamburger-lines
+						span.line.line1
+						span.line.line2
+						span.line.line3
+
+					.logo-icon
+						.logo-icon__img 
+							img(src="i/icons/i-logo.svg", alt="")
+					
+					ul.menu-items.menu-toggle-open
+						li.navItem
+							a(href="#advant") Преимущества
+						li.navItem
+							a(href="#catalog") Каталог
+						li.navItem
+							a(href="#promotions") Акции
+						li.navItem
+							a(href="#about-us") О нас
+						li.navItem
+							a(href="#contact") Контакты
+							
 				.contact-box
-	
+					.contact-box__phone-icon 
+						img(src="i/icons/i-phone.svg", alt="")
+						a(href="tel:+79182617028") 8 (918) 261-70-28
+					.contact-box__messanger
+						.contact-box__messanger-icon 
+							img(src="i/icons/i-telega.svg", alt="")
+						.contact-box__messanger-icon 
+							img(src="i/icons/i-whatsapp.svg", alt="")
+		

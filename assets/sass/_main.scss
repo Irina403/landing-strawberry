@@ -1,0 +1,15 @@
+.main{
+    padding-top: 21.5rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    background-image: url(../i/bg-main.png);
+    // height: 100vh;
+    background-repeat: no-repeat;
+    &__title{
+        font-size: 4.4rem;
+        font-family: $font_1;
+    }
+    &__btn{
+        margin-top: 5rem;
+    }
+}

@@ -1,6 +1,4 @@
-
-
-  /* desktop mode............/// */
+/* desktop mode............/// */
   
   .navbar input[type="checkbox"],
   .navbar .hamburger-lines {
@@ -14,7 +12,14 @@
 	color: #fff;
 	opacity: 0.85;
 	z-index: 12;
+  
+  &__flex{
+	padding-top: 1.2rem;
+	height:11rem;
+	display: flex;
+	justify-content: space-between;
   }
+}
 .tel a{
 	font-size: 1.8rem;
 	color:#fff;
@@ -28,48 +33,67 @@
 	z-index: 1;
 
 }
-  .navbar-container {
+
+.navbar-container {
 	display: flex;
-	justify-content: space-around;
-	height: 6.4rem;
 	align-items: center;
-  }
-
+}
+.logo-icon{
+	&__img{
+		margin-right: 4.3rem;
+	}
+}
   .menu-items {
-
 	display: flex;
   }
   
   .menu-items li {
 	list-style: none;
-	margin-left: 1.5rem;
 	margin-bottom: 0.5rem;
-	font-size: 1.2rem;
+	
   }
   
   .menu-items a {
 	color: #fff;
 	text-decoration: none;
-	font-size: 1.6rem;
-	font-family: $font_1;
-	margin-left: 4.5rem;
+	font-size: 2rem;
+	font-family: $font_2;
+	margin-right: 6rem;
 	transition: color 0.3s ease-in-out;
   }
   
   .menu-items a:hover {
-	color: #ffaedd;
-	text-decoration-line:underline;
+	color: #18B60C;
 	transition: color 0.3s ease-in-out;
   }
   .tel a:hover{
 
-		color: #ffaedd;
+		color: #18B60C;
 		transition: color 0.3s ease-in-out;
 	}
 
   /* ............//// Showcase styling ////......... */
   
-
+  .contact-box{
+	display: flex;
+	align-items: center;
+	&__phone-icon{
+		display: flex;
+		align-items: center;
+	}
+	&__phone-icon a{
+		color: #fff;
+		font-family: $font_2;
+		text-decoration: none;
+		margin-left: 1.5rem;
+	}
+	&__messanger{
+		display: flex;
+	}
+	&__messanger-icon {
+		margin-left: 3rem;
+	}
+  }
   @media (max-width: 1020px) {
 	.contact-box{
 		position: absolute;
@@ -149,7 +173,7 @@
 	  display: flex;
 	  flex-direction: column;
 	  margin-left: -40px;
-	  padding-left: 50px;
+	//   padding-left: 50px;
 	  transition: transform 0.5s ease-in-out;
 	  box-shadow: 5px 0px 10px 0px #aaa;
 	}

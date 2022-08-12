@@ -1,17 +1,17 @@
-.button{
-    border-radius: 6px;
-    background: -webkit-linear-gradient( 90deg, rgb(255,33,79) 0%, rgb(255,92,1) 100%);
+.btn{
+    border-radius: 5rem;
+    background: #18B60C;
     cursor: pointer;
-    width: 28rem;
-    height: 7rem;
+    width: 30.7rem;
+    height: 7.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-		font-family: $font_3;     
+		font-family: $font_1;     
 }
 .titleBlock{
     font-size: 6rem;
-    font-family: $font_3;
+    font-family: $font_1;
     color: #000;
     text-transform: uppercase;
     line-height: 1.2;
