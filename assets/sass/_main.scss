@@ -1,15 +1,188 @@
+img {
+	max-width: 100%;
+}
 .main{
     padding-top: 21.5rem;
     padding-left: 25rem;
     padding-right: 25rem;
     background-image: url(../i/bg-main.png);
-    // height: 100vh;
+    background-size: cover;
+    height: 82.5rem;
     background-repeat: no-repeat;
+    display: flex;
     &__title{
-        font-size: 4.4rem;
+        font-size: 44px;
         font-family: $font_1;
+        color:$white;
     }
     &__btn{
         margin-top: 5rem;
+        color:$white;
     }
+    &__col-img{
+        position: absolute;
+        right: 25rem;
+        @include bp($point_0){
+            width: 45%;
+            right: 25rem;
+        }
+    }
+  
+    &__col-img img{
+        // @include bp($point_0){
+        //     width: 70%;
+        // }
+    }
+    // &__screen::after {
+    //     content: url(../i/img-main.png);
+    //     position: absolute;
+    //     right: 25rem;
+    //     bottom: 0;
+    //     z-index: 3;
+    // }
+}
+.main__title span {
+    position: relative;
+
+}
+.main__title span::after{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: -12px;
+    content: url(../i/icons/oval-text.svg);
+}
+.advant-block{
+    position: relative;
+    margin-top: -22rem;
+    background-image: url(../i/bg-block2.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    z-index: -1;
+    background-position: center;
+    &__title{
+        margin-top: -10rem;
+        margin-bottom: 22rem;
+    }
+    &__row{
+        display: flex;
+        height: 50rem;
+        position: relative;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__row::after{
+        top:-40%;
+        bottom: 0;
+        left: 33%;
+        position: absolute;
+        content: url('../i/img-plate.png');
+        @include bp($point_0){
+            left: 32%;
+        }
+    }
+}
+.advant-elem{
+    width: 44.5rem; 
+    height: 15.5rem; 
+    margin-left: -6%;
+    background: $black;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.12);
+    z-index: 9;
+    &::before{
+        content: "";
+        display: block;
+        height: 25px;
+        width: 25px;
+        background-color: inherit;
+        border: inherit;
+        position: absolute;
+        top: calc(50% - 12px);
+        left: 96%;
+        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+        transform: rotate(-135deg);
+        border-radius: 0 0 0 0.3em;
+    }
+    
+
+    &__item{
+        position: relative;
+        height: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+   
+    }
+
+    &__block{
+        margin-left: 2.5rem;
+        color: $white;
+    }
+
+    &__title{
+        margin-bottom: 1rem;
+        font-weight: 500;
+        font-size: 2rem;
+        font-family: $font_2;
+    }
+    &__text{
+        width: 27rem;
+        font-size: 1.8rem;
+        font-family: $font_2;
+    }
+}
+.advant-elem:nth-child(2n){
+    margin-left: 18%;
+    margin-top: 4rem;
+    background-color: #fff;
+}
+.visual-elem{
+   padding-top: 20rem;
+}
+.advant-elem-right{
+    width: 44.5rem; 
+    height: 15.5rem; 
+    margin-left: 22%;
+    background: $black;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.12);
+    z-index: 9;
+    &::before{
+        content: "";
+        display: block;
+        height: 25px;
+        width: 25px;
+        background-color: inherit;
+        border: inherit;
+        position: absolute;
+        top: calc(50% - 12px);
+        right: 96%;
+        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+        transform: rotate(45deg);
+        border-radius: 0 0 0 0.3em;
+    }
+}
+.advant-elem-right:nth-child(2n){
+    margin-left: 0%;
+    margin-top: 4rem;
+    background-color: #fff;
+}
+.advant-block::after{
+    top:95%;
+    position: absolute;
+    left: 50%;
+    content: url('../i/curve-line.png');
+    @include bp($point_0){
+        top:100%;
+    }
+}
+.empty-height{
+    height: 10rem;
+}
+.catalog{
+    margin-top: 10rem;
 }

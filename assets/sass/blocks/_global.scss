@@ -9,14 +9,20 @@
     justify-content: center;
 		font-family: $font_1;     
 }
-.titleBlock{
-    font-size: 6rem;
+// .titleBlock{
+//     font-size: 6rem;
+//     font-family: $font_1;
+//     color: #000;
+//     text-transform: uppercase;
+//     line-height: 1.2;
+//     text-align: left;
+// 		@include bp ($point_3){
+// 			font-size: 4.2rem
+// 		}
+// }
+.title-block{
+    font-size: 4rem;
     font-family: $font_1;
-    color: #000;
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: left;
-		@include bp ($point_3){
-			font-size: 4.2rem
-		}
+    text-align: center;
 }
+
