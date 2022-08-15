@@ -1,0 +1,109 @@
+footer.footer 
+    //- .empty-height
+    .footer__block 
+        .footer__block__img 
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acad7fab8af3ec305d923bb12ebfb3e1eeb9b08fb2851a82425599f7804acb1ac&amp;source=constructor" width="100%" height="576" frameborder="0"></iframe>
+      
+        .footer__contacts.contact
+            .section_in 
+                .contact__wrapp 
+                    .contact__title Контакты
+                    ul.contact__list 
+                        li.contact__info.info-list 
+                            .info-list__icon
+                                img(src="i/icons/i-map.svg", alt="")
+                            .info-list__box
+                                .info-list__text-title Адрес
+                                .info-list__text-desc Краснодарский край, Белореченский <br> р-н, Белореченск, ул. Мира
+                        
+                        li.contact__info.info-list 
+                            .info-list__icon
+                                img(src="i/icons/i-phone-black.svg", alt="")
+                            .info-list__box
+                                .info-list__text-title Телефон
+                                .info-list__text-desc 
+                                    a(href="tel:+79182617028") 8 (918) 261-70-28
+
+                        li.contact__info.info-list 
+                            .info-list__icon
+                                img(src="i/icons/i-mail.svg", alt="")
+                            .info-list__box
+                                .info-list__text-title Почта
+                                .info-list__text-desc 
+                                    a(href="mailto:mail@mail.ru") mail@mail.ru
+
+                    .contact__messengers.messengers
+                        .messengers__block
+                            .messengers__item
+                                a(href="#")  
+                                    img(src="i/icons/i-telega.svg", alt="")
+                            .messengers__item
+                                a(href="#")  
+                                    img(src="i/icons/whatsapp-footer.svg", alt="")
+
+                    .contact__button.button-popup
+                        .button-popup__btn Оставить заявку
+    .footer__end.footer-end 
+        .section_in
+            .footer-end__row 
+                .footer-end__col © 2022 Все права защищены
+                .footer-end__col 
+                    a(href="#") Политика конфиденциальности
+                .footer-end__col
+                    a(href="#").footer-end__col.col-arkada Разработано arkada-web.ru
+                        img(src="i/icons/i-arkada.svg", alt="")
+
+
+                    
+    .modal(data-modal="product1")
+        .modal__overflow 
+            .modal__body
+                .modal__close 
+                    .modal__close-img
+                        img(src="i/icons/i-close.svg", alt="")
+                .modal__row
+                    .modal__col.modal__col-slide 
+                        .modal__slide 
+                            img(src="../i/slide1.png", alt="")
+                        .modal__arrow.arrow__slide 
+                            .arrow__slide-left
+                                img(src="i/icons/arrow-left.svg", alt="")
+                            .arrow__slide-right
+                                img(src="i/icons/arrow-right.svg", alt="")
+
+                    .modal__col.modal__col-info 
+                        .modal__title(data-modal="title1") Клубника “Мурано”
+                        .modal__text <strong> Сорт: </strong> ремонтантный
+                        .modal__text <strong> Содержание сахара: </strong> до 4,15% 
+                        .modal__text <strong> Артикул: </strong> S50356
+                        .modal__text <strong> Вес ягоды: </strong>  до 33,5 г 
+                    
+                        .modal__btn 
+                            .modal__btn-link Заказать
+
+                .modal__row.row-desc 
+                    .row-desc__title Описание
+                    .row-desc__box
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+
+    .modal-form 
+        .modal-form__overflow
+            .modal-form__body
+                .modal-form__close 
+                    .modal-form__close-img
+                        img(src="i/icons/i-close.svg", alt="") 
+                
+                .modal-form__title Форма заявки
+                .contactForm 
+                    input(type="text" placeholder="Ваше имя").contactForm__input 
+                    input(type="text" placeholder="Ваш телефон").contactForm__input 
+                    .contactForm__btn Отправить
+                    
+                    .contactForm__checkbox 
+                        input(type="checkbox" id="click").contactForm__checkbox-custom
+            
+                        label(for="click") Отправляя информацию, вы соглашаетесь <br> с политикой конфиденциальности.
+

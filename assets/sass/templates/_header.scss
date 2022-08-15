@@ -1,5 +1,8 @@
 /* desktop mode............/// */
   
+.fixed-top.scrolled{
+	background-color:$black;
+}
   .navbar input[type="checkbox"],
   .navbar .hamburger-lines {
 	display: none;
@@ -10,12 +13,13 @@
 	width: 100%;
 	background: transparant;
 	color: #fff;
-	opacity: 0.85;
+	// opacity: 0.85;
 	z-index: 12;
   
   &__flex{
 	padding-top: 1.2rem;
-	height:11rem;
+	padding-bottom: 1.2rem;
+	// height:11rem;
 	display: flex;
 	justify-content: space-between;
   }
@@ -92,6 +96,7 @@
 	}
 	&__messanger-icon {
 		margin-left: 3rem;
+		cursor: pointer;
 	}
   }
   @media (max-width: 1020px) {

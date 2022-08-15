@@ -48,9 +48,12 @@ img {
 .main__title span::after{
     position: absolute;
     bottom: 0;
-    top: 0;
+    top: -13.5px;
     left: -12px;
     content: url(../i/icons/oval-text.svg);
+    @include bp($point_0){
+        top: -12px;
+    }
 }
 .advant-block{
     position: relative;
@@ -64,6 +67,11 @@ img {
         margin-top: -10rem;
         margin-bottom: 22rem;
     }
+    &__title::after{
+        position: absolute;
+        right: 20%;
+        content: url(../i/img-flower2.png);
+    }
     &__row{
         display: flex;
         height: 50rem;
@@ -74,11 +82,12 @@ img {
     &__row::after{
         top:-40%;
         bottom: 0;
-        left: 33%;
+        left: 36%;
         position: absolute;
         content: url('../i/img-plate.png');
         @include bp($point_0){
-            left: 32%;
+            left: 30%;
+            top: -50%;
         }
     }
 }
@@ -135,9 +144,12 @@ img {
     }
 }
 .advant-elem:nth-child(2n){
-    margin-left: 18%;
+    margin-left: 28%;
     margin-top: 4rem;
     background-color: #fff;
+    @include bp($point_0){
+        margin-left: 13%;
+    }
 }
 .visual-elem{
    padding-top: 20rem;
@@ -167,9 +179,12 @@ img {
     }
 }
 .advant-elem-right:nth-child(2n){
-    margin-left: 0%;
+    margin-left: -8%;
     margin-top: 4rem;
     background-color: #fff;
+    @include bp($point_0){
+        margin-left: 5%;
+    }
 }
 .advant-block::after{
     top:95%;
@@ -177,12 +192,206 @@ img {
     left: 50%;
     content: url('../i/curve-line.png');
     @include bp($point_0){
-        top:100%;
+        top:140rem;
     }
 }
 .empty-height{
-    height: 10rem;
+    height: 20rem;
+    @include bp($point_0){
+        height: 40rem;
+    }
+    
 }
 .catalog{
     margin-top: 10rem;
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 8rem;
+    }
+    &__title{
+        margin-bottom: 7rem;
+    }
 }
+
+.product{
+    margin-bottom:2rem;
+    padding: 20px;
+    width: 34rem;
+    border: 1px solid #EBEBEB;
+    box-shadow: -4px 16px 32px rgba(45, 45, 45, 0.12);
+    border-radius: 20px;
+    &__img{
+        margin-bottom: 1.5rem;
+    }
+    &__title{
+        margin-bottom: 1rem;
+        font-family: $font_2;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 24px;
+
+    }
+    &__desc {
+        margin-bottom: 3rem;
+        font-family: $font_2;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 22px;
+    }
+    &__btn{
+        width: 20.4rem;
+        height: 6rem;
+        background-color:$green;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        border-radius:50px;
+        color:$white;
+        cursor: pointer;
+    }
+} 
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 5rem;
+    &__arrow{
+        cursor: pointer;
+    }
+    &__list{
+        display: flex;
+        align-items:center;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    &__list li{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        background-color:$black;
+        border-radius:5px;
+        color:$white;
+        cursor: pointer;
+    }
+}
+
+.promotionBlock{
+    position: relative;
+    display: flex;
+    align-items:center;
+    height: 85rem;
+    background-image:url('../i/bg-share.png');
+    color:$white;
+    background-size:cover;
+
+    &__img{
+        position: absolute;
+        right: 0;
+        width: 40%;
+        top: 5rem;
+    }
+    &__img img{
+        max-width: 100%;
+    }
+    &__info{
+        width:80rem;
+    }
+    &__title{
+        padding-top: 15rem;
+        font-size: 4rem;
+        font-family: $font_1;
+        margin-bottom: 2rem;
+    }
+    &__desck{
+        font-size: 2rem;
+        font-family: $font_2;
+        margin-bottom: 6rem;
+        line-height: 24px;
+    }
+    &__btn{
+        color:$white;
+    }
+}
+
+.aboutUs{
+    margin-top: -20rem;
+    background-image:url(../i/bg-offer.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding-bottom: 30rem;
+    &::after{
+        position: absolute;
+        content:url(../i/curve-line2.png);
+        right:0;
+        margin-top: -15rem;
+    }
+    &__row {
+        padding-top: 12rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    &__img{
+        position: relative;
+        z-index: 9;
+
+    }
+    &__info{
+        margin-left: 16rem;
+        width: 84rem;
+    }
+    &__title{
+        margin-bottom: 4rem;
+        font-size: 4rem;
+        font-family: $font_1;
+    }
+    &__description {
+        font-size: 1.8rem;
+        font-family: $font_2;
+        line-height: 22px;
+    }
+    &__description p{
+        margin-bottom: 2rem;
+
+    }
+}
+.video{
+    position: relative;
+    margin-top: -15rem;
+
+    &__title{
+        margin-bottom: 4rem;
+    }
+    &__v{
+        text-align: center;
+    }
+    &__play {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom:0;
+        left: 0;
+        cursor: pointer;
+    }
+    &__v::before{
+        position: absolute;
+        content:url(../i/curve-line3.png);
+        left:0;
+        bottom: 0;
+        z-index: -1;
+    }
+    &__v::after{
+        margin-left: 6rem;
+        position: absolute;
+        content:url(../i/img-strawberry-video.png)
+    }
+} 
