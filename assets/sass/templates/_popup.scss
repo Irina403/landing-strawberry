@@ -1,10 +1,25 @@
 .modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:2rem;
+    padding: 10px; 
+    z-index: 20;
+    background-color: #fff;
+    display: none;
     &__body{
-        position: relative;
-        padding: 5rem 4rem;
-        margin: auto;
-        width: 118rem;
-        border-radius: 20px;
+        // position: fixed;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // position: relative;
+        // padding: 5rem 4rem;
+        // // margin: auto;
+        // width: 118rem;
+        // border-radius: 20px;
+        // background-color:#fff;
         // border:1px solid #000;
        
     }
@@ -81,18 +96,29 @@
 }
 
 .modal-form{
-    
     &__body{
+        position: relative;
         padding: 2rem;
         border:1px solid #000;
         margin: 0 auto;
         width: 54.4rem;
         border-radius:2rem;
     }
+    &__overflow{
+        position: absolute;
+        background-color:#000;
+        height: 100%;
+        width: 100%;
+    }
     &__title{
         margin-bottom: 3rem;
         font-size: 4rem;
         text-align: center;
+    }
+    .modal-form__close-img{
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
     }
 }
 .contactForm{
@@ -163,4 +189,21 @@
 .contactForm__checkbox-custom:checked + label::before{
     background-color: #F4F4F4;
     background-image: url("../../i/icons/check.svg");
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 10;
+    display: none;
+    cursor: pointer;
+}
+
+.modal.is-show,
+.overlay.is-show{
+   display: block;
 }

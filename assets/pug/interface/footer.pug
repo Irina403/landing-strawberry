@@ -56,54 +56,89 @@ footer.footer
 
                     
     .modal(data-modal="product1")
-        .modal__overflow 
-            .modal__body
-                .modal__close 
-                    .modal__close-img
-                        img(src="i/icons/i-close.svg", alt="")
-                .modal__row
-                    .modal__col.modal__col-slide 
-                        .modal__slide 
-                            img(src="../i/slide1.png", alt="")
-                        .modal__arrow.arrow__slide 
-                            .arrow__slide-left
-                                img(src="i/icons/arrow-left.svg", alt="")
-                            .arrow__slide-right
-                                img(src="i/icons/arrow-right.svg", alt="")
+        .modal__close 
+            .modal__close-img
+                img(src="i/icons/i-close.svg", alt="")
+        .modal__row
+            .modal__col.modal__col-slide 
+                .modal__slide 
+                    img(src="../i/slide1.png", alt="")
+                .modal__arrow.arrow__slide 
+                    .arrow__slide-left
+                        img(src="i/icons/arrow-left.svg", alt="")
+                    .arrow__slide-right
+                        img(src="i/icons/arrow-right.svg", alt="")
 
-                    .modal__col.modal__col-info 
-                        .modal__title(data-modal="title1") Клубника “Мурано”
-                        .modal__text <strong> Сорт: </strong> ремонтантный
-                        .modal__text <strong> Содержание сахара: </strong> до 4,15% 
-                        .modal__text <strong> Артикул: </strong> S50356
-                        .modal__text <strong> Вес ягоды: </strong>  до 33,5 г 
-                    
-                        .modal__btn 
-                            .modal__btn-link Заказать
-
-                .modal__row.row-desc 
-                    .row-desc__title Описание
-                    .row-desc__box
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-
-    .modal-form 
-        .modal-form__overflow
-            .modal-form__body
-                .modal-form__close 
-                    .modal-form__close-img
-                        img(src="i/icons/i-close.svg", alt="") 
-                
-                .modal-form__title Форма заявки
-                .contactForm 
-                    input(type="text" placeholder="Ваше имя").contactForm__input 
-                    input(type="text" placeholder="Ваш телефон").contactForm__input 
-                    .contactForm__btn Отправить
-                    
-                    .contactForm__checkbox 
-                        input(type="checkbox" id="click").contactForm__checkbox-custom
+            .modal__col.modal__col-info 
+                .modal__title(data-modal="title1") Клубника “Мурано”
+                .modal__text <strong> Сорт: </strong> ремонтантный
+                .modal__text <strong> Содержание сахара: </strong> до 4,15% 
+                .modal__text <strong> Артикул: </strong> S50356
+                .modal__text <strong> Вес ягоды: </strong>  до 33,5 г 
             
-                        label(for="click") Отправляя информацию, вы соглашаетесь <br> с политикой конфиденциальности.
+                .modal__btn 
+                    .modal__btn-link Заказать
 
+        .modal__row.row-desc 
+            .row-desc__title Описание
+            .row-desc__box
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+
+
+    .modal(data-modal="product2")
+        .modal__close 
+            .modal__close-img
+                img(src="i/icons/i-close.svg", alt="")
+        .modal__row
+            .modal__col.modal__col-slide 
+                .modal__slide 
+                    img(src="../i/card2.png", alt="")
+                .modal__arrow.arrow__slide 
+                    .arrow__slide-left
+                        img(src="i/icons/arrow-left.svg", alt="")
+                    .arrow__slide-right
+                        img(src="i/icons/arrow-right.svg", alt="")
+
+            .modal__col.modal__col-info 
+                .modal__title(data-modal="title2") Клубника “Кабрилло”
+                .modal__text <strong> Сорт: </strong> ремонтантный
+                .modal__text <strong> Содержание сахара: </strong> до 4,15% 
+                .modal__text <strong> Артикул: </strong> S50356
+                .modal__text <strong> Вес ягоды: </strong>  до 33,5 г 
+            
+                .modal__btn 
+                    .modal__btn-link Заказать
+
+        .modal__row.row-desc 
+            .row-desc__title Описание
+            .row-desc__box
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+
+    
+    
+    
+    .modal-form 
+        .modal-form__body
+            .modal-form__close 
+                .modal-form__close-img
+                    img(src="i/icons/i-close.svg", alt="") 
+            
+            .modal-form__title Форма заявки
+            .contactForm 
+                input(type="text" placeholder="Ваше имя").contactForm__input 
+                input(type="text" placeholder="Ваш телефон").contactForm__input 
+                .contactForm__btn Отправить
+                
+                .contactForm__checkbox 
+                    input(type="checkbox" id="click").contactForm__checkbox-custom
+        
+                    label(for="click") Отправляя информацию, вы соглашаетесь <br> с политикой конфиденциальности.
+
+
+    .overlay.js-modal-overlay
