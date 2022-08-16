@@ -18,6 +18,7 @@ $('.js-open-modal').click(function(event) {
     $(this).removeClass('is-show');
  });
 
+ $('.modal__slide').slick();
 
 
 
