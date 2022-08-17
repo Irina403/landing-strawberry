@@ -85,6 +85,12 @@
     border-radius:50px;
     color:$white;
     cursor: pointer;
+    transition: background-color 0.6s;
+    transition: box-shadow 0.6s;
+}
+.button-popup:hover{
+    background: #14950B;;
+    box-shadow: -7px 9px 24px rgba(20, 149, 11, 0.4);
 }
 .footer-end {
     margin-top: -1rem;

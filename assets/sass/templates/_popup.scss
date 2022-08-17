@@ -10,30 +10,13 @@
     background-color: #fff;
     display: none;
     max-width: 900px;
+    transition: display 0.6s;
     @include bp($point_4){
         padding: 3rem 4rem 3rem 4rem;
     }
     @include bp($point_6){
         padding: 3rem;
     }
-    // height: 762px;
-    &__body{
-        // position: fixed;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        // position: relative;
-        // padding: 5rem 4rem;
-        // // margin: auto;
-        // width: 118rem;
-        // border-radius: 20px;
-        // background-color:#fff;
-        // border:1px solid #000;
-       
-    }
-    // &__close-img{
-    //     width: 100%;
-    // }
     &__row{
         margin-top: 5rem;
         display: flex;
@@ -116,21 +99,21 @@
 }
 
 .modal-form{
-    &__body{
-        position: relative;
-        padding: 2rem;
-        border:1px solid #000;
-        margin: 0 auto;
-        width: 54.4rem;
-        border-radius:2rem;
-        display: none;
-    }
-    &__overflow{
-        position: absolute;
-        background-color:#000;
-        height: 100%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:2rem;
+    padding: 8rem 4rem 8rem 4rem;
+    z-index: 20;
+    background-color: #fff;
+    // padding: 2rem;
+    border-radius:2rem;
+    @include bp($point_6){
         width: 100%;
     }
+
     &__title{
         margin-bottom: 3rem;
         font-size: 4rem;
@@ -140,8 +123,22 @@
         position: absolute;
         right: 2rem;
         top: 2rem;
+        cursor: pointer;
     }
 }
+// .modal-form::before{
+//     content: '';
+// 	background: #000;
+// 	position: fixed; 
+// 	left: 0;
+// 	top: 0;
+// 	width: 100%; 
+// 	height: 100%;
+// 	opacity: 0.7;
+// 	z-index: 9999;
+// }
+
+
 .contactForm{
     display: flex;
     flex-direction: column;
@@ -225,6 +222,10 @@
 }
 
 .modal.is-show,
+.overlay.is-show{
+   display: block;
+}
+.modal-form.is-show,
 .overlay.is-show{
    display: block;
 }

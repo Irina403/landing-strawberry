@@ -42,7 +42,7 @@ footer.footer
                                     img(src="i/icons/whatsapp-footer.svg", alt="")
 
                     .contact__button.button-popup
-                        .button-popup__btn Оставить заявку
+                        .button-popup__btn.order Оставить заявку
     .footer__end.footer-end 
         .section_in
             .footer-end__row 
@@ -75,7 +75,7 @@ footer.footer
                 .modal__text <strong> Вес ягоды: </strong>  до 33,5 г 
             
                 .modal__btn 
-                    .modal__btn-link Заказать
+                    .modal__btn-link.order Заказать
 
         .modal__row.row-desc 
             .row-desc__title Описание
@@ -107,7 +107,7 @@ footer.footer
                 .modal__text <strong> Вес ягоды: </strong>  до 33,5 г 
             
                 .modal__btn 
-                    .modal__btn-link Заказать
+                    .modal__btn-link.order Заказать
 
         .modal__row.row-desc 
             .row-desc__title Описание
@@ -121,21 +121,20 @@ footer.footer
     
     
     .modal-form 
-        .modal-form__body
-            .modal-form__close 
-                .modal-form__close-img
-                    img(src="i/icons/i-close.svg", alt="") 
-            
-            .modal-form__title Форма заявки
-            .contactForm 
-                input(type="text" placeholder="Ваше имя").contactForm__input 
-                input(type="text" placeholder="Ваш телефон").contactForm__input 
-                .contactForm__btn Отправить
-                
-                .contactForm__checkbox 
-                    input(type="checkbox" id="click").contactForm__checkbox-custom
+        .modal-form__close 
+            .modal-form__close-img
+                img(src="i/icons/i-close.svg", alt="") 
         
-                    label(for="click") Отправляя информацию, вы соглашаетесь <br> с политикой конфиденциальности.
+        .modal-form__title Форма заявки
+        .contactForm 
+            input(type="text" placeholder="Ваше имя").contactForm__input 
+            input(type="text" placeholder="Ваш телефон").contactForm__input 
+            .contactForm__btn Отправить
+            
+            .contactForm__checkbox 
+                input(type="checkbox" id="click").contactForm__checkbox-custom
+    
+                label(for="click") Отправляя информацию, вы соглашаетесь <br> с политикой конфиденциальности.
 
 
     .overlay.js-modal-overlay
