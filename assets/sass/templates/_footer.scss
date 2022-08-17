@@ -1,11 +1,26 @@
 .footer__block{
     position: relative;
     margin-top: 25rem;
+    @include bp($point_2){
+        margin-top: 15rem;
+    }
+}
+.footer__block__img{
+    @include bp($point_6){
+        margin-top: 50rem;
+    }
 }
 .contact{
     padding-left: 25rem;
     position: absolute;
     top: -8rem;
+    @include bp($point_4){
+        padding-left: 8rem;
+    }
+    @include bp($point_6){
+        padding-left: 0rem;
+        top: -47rem !important;
+    }
     &__wrapp{
         padding: 4rem;
         width: 48rem;
@@ -13,6 +28,9 @@
         border: 1px solid #EBEBEB;
         box-shadow: -4px 16px 32px rgba(45, 45, 45, 0.12);
         border-radius: 20px;
+        @include bp($point_2){
+            width: 100%;
+        }
         
     }
     &__title{
@@ -54,6 +72,7 @@
     }   
     &__item{
         margin-right: 3rem;
+        cursor: pointer;
     }
 }
 .button-popup{
@@ -75,6 +94,12 @@
         display: flex;
         align-items:center;
         justify-content: space-between;
+        @include bp($point_6){
+            padding-top: 1.5rem;
+            height: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__col{
         font-size: 1.6rem;
@@ -83,6 +108,9 @@
         align-items:center;
         height: 100%;
         color:$white;
+        @include bp($point_6){
+            margin-bottom: 1rem;
+        }
     }
     &__col a{
         color:$white;

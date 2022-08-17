@@ -10,10 +10,32 @@ img {
     height: 82.5rem;
     background-repeat: no-repeat;
     display: flex;
+    @include bp($point_1400){
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    @include bp($point_2){
+        padding-top: 17.5rem;
+    }
+    @include bp($point_4){
+        padding-top: 12.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        height: 76.5rem;
+    }
     &__title{
         font-size: 44px;
         font-family: $font_1;
         color:$white;
+        @include bp($point_0){
+            font-size: 42px;
+        }
+        @include bp($point_4){
+            font-size: 40px;
+        }
+        @include bp($point_6){
+            font-size: 36px;
+        }
     }
     &__btn{
         margin-top: 5rem;
@@ -26,6 +48,19 @@ img {
             width: 45%;
             right: 25rem;
         }
+        @include bp($point_1400){
+           right: 15rem;
+        }
+        @include bp($point_2){
+            top:40%;
+            width: 52%;
+         }
+         @include bp($point_6){
+            top:46%;
+            width:90%;
+            right: 3rem;
+         }
+
     }
   
     &__col-img img{
@@ -48,11 +83,15 @@ img {
 .main__title span::after{
     position: absolute;
     bottom: 0;
-    top: -13.5px;
+    top: -5.5px;
     left: -12px;
     content: url(../i/icons/oval-text.svg);
     @include bp($point_0){
-        top: -12px;
+        top: -8px;
+        left: -13px;
+    }
+    @include bp($point_6){
+        left: -24px;
     }
 }
 .advant-block{
@@ -63,14 +102,34 @@ img {
     background-size: auto;
     z-index: -1;
     background-position: center;
+    @include bp($point_4){
+       margin-top: -6rem;
+    }
     &__title{
         margin-top: -10rem;
         margin-bottom: 22rem;
+ 
+        @include bp($point_2){
+            margin-top: -23rem;
+        }
+        @include bp($point_4){
+            margin-bottom: 5rem;
+        }
     }
+   
     &__title::after{
         position: absolute;
         right: 20%;
         content: url(../i/img-flower2.png);
+        @include bp($point_2){
+            right: 10%;
+        }
+        @include bp($point_4){
+            right: 0%;
+        }
+        @include bp($point_6){
+            display: none;
+        }
     }
     &__row{
         display: flex;
@@ -78,6 +137,10 @@ img {
         position: relative;
         justify-content: space-between;
         width: 100%;
+        @include bp($point_4){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__row::after{
         top:-40%;
@@ -89,7 +152,24 @@ img {
             left: 30%;
             top: -50%;
         }
+        @include bp($point_1400){
+            left: 25%;
+        }
+        @include bp($point_2){
+            left: 22%;
+        }
+        @include bp($point_4){
+            display: none;
+        }
     }
+    &__col{
+        margin-top: 4rem;
+        @include bp($point_6){
+            margin-top: 0rem;
+            margin-bottom: 4rem;
+        }
+    }
+    
 }
 .advant-elem{
     width: 44.5rem; 
@@ -100,6 +180,10 @@ img {
     border-radius: 30px;
     box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.12);
     z-index: 9;
+    @include bp($point_2){
+       width: 36.5rem;
+       margin-left: -0%;
+    }
     &::before{
         content: "";
         display: block;
@@ -113,6 +197,9 @@ img {
         clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
         transform: rotate(-135deg);
         border-radius: 0 0 0 0.3em;
+        @include bp($point_4){
+           display: none;
+        }
     }
     
 
@@ -123,12 +210,18 @@ img {
         position: relative;
         align-items: center;
         justify-content: center;
+        @include bp($point_4){
+           text-align: center;
+        }
    
     }
 
     &__block{
         margin-left: 2.5rem;
         color: $white;
+        @include bp($point_4){
+            margin-left: 0rem;
+        }
     }
 
     &__title{
@@ -142,6 +235,11 @@ img {
         font-size: 1.8rem;
         font-family: $font_2;
     }
+    &__icon{
+        @include bp($point_2){
+            display: none;
+         }
+    }
 }
 .advant-elem:nth-child(2n){
     margin-left: 28%;
@@ -150,10 +248,19 @@ img {
     @include bp($point_0){
         margin-left: 13%;
     }
+    @include bp($point_2){
+       margin-left: 0%;
+     }
 }
 .visual-elem{
-   padding-top: 20rem;
+   padding-top: 10rem;
 }
+.visual-elem img{
+    padding-top: 0rem;
+    @include bp($point_4){
+     display: none;
+   }
+ }
 .advant-elem-right{
     width: 44.5rem; 
     height: 15.5rem; 
@@ -163,6 +270,12 @@ img {
     border-radius: 30px;
     box-shadow: 14px 14px 30px rgba(0, 0, 0, 0.12);
     z-index: 9;
+    @include bp($point_2){
+        width: 36.5rem;
+     }
+     @include bp($point_2){
+        margin-left: 0%;
+      }
     &::before{
         content: "";
         display: block;
@@ -176,6 +289,9 @@ img {
         clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
         transform: rotate(45deg);
         border-radius: 0 0 0 0.3em;
+        @include bp($point_4){
+            display: none;
+         }
     }
 }
 .advant-elem-right:nth-child(2n){
@@ -184,6 +300,9 @@ img {
     background-color: #fff;
     @include bp($point_0){
         margin-left: 5%;
+    }
+    @include bp($point_2){
+        margin-left: 0%;
     }
 }
 .advant-block::after{
@@ -194,25 +313,52 @@ img {
     @include bp($point_0){
         top:140rem;
     }
+    @include bp($point_1400){
+        top:152rem;
+    }
+    @include bp($point_2){
+        top:89%;
+    }
+    @include bp($point_4){
+       display: none;
+     }
 }
 .empty-height{
     height: 20rem;
     @include bp($point_0){
         height: 40rem;
     }
+    @include bp($point_0){
+        height: 0rem;
+    }
     
 }
 .catalog{
     margin-top: 10rem;
+    @include bp($point_1400){
+        margin-top: 20rem;
+    }
+    @include bp($point_4){
+        margin-top: 34rem;
+    }
+    @include bp($point_6){
+        margin-top: 28rem;
+    }
 
     &__list{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-bottom: 8rem;
+        @include bp($point_4){
+            justify-content: center;
+        }
     }
     &__title{
         margin-bottom: 7rem;
+        @include bp($point_6){
+            margin-bottom: 3rem;
+        }
     }
 }
 
@@ -291,24 +437,39 @@ img {
     background-image:url('../i/bg-share.png');
     color:$white;
     background-size:cover;
+    @include bp($point_2){
+        background-position: top;
+    }
 
     &__img{
         position: absolute;
         right: 0;
         width: 40%;
         top: 5rem;
+        @include bp($point_2){
+            width: 46%;
+        }
+        @include bp($point_6){
+            width: 68%;
+        }
     }
     &__img img{
         max-width: 100%;
     }
     &__info{
         width:80rem;
+        @include bp($point_2){
+            width: 100%;
+        }
     }
     &__title{
         padding-top: 15rem;
         font-size: 4rem;
         font-family: $font_1;
         margin-bottom: 2rem;
+        @include bp($point_6){
+            padding-top: 9rem;
+        }
     }
     &__desck{
         font-size: 2rem;
@@ -332,6 +493,9 @@ img {
         content:url(../i/curve-line2.png);
         right:0;
         margin-top: -15rem;
+        @include bp($point_2){
+            margin-top: 0rem;
+        }
     }
     &__row {
         padding-top: 12rem;
@@ -339,15 +503,32 @@ img {
         display: flex;
         justify-content: space-between;
         align-items:center;
+        @include bp($point_2){
+            margin-top: 0rem;
+        }
     }
     &__img{
         position: relative;
         z-index: 9;
 
     }
+    &__img{
+        @include bp($point_2){
+           display: none;
+        }
+
+    }
     &__info{
         margin-left: 16rem;
         width: 84rem;
+        @include bp($point_2){
+            padding-top: 13rem;
+            margin-left: 0rem;
+            width: 100%;
+        }
+        @include bp($point_6){
+            padding-top: 7rem;
+        }
     }
     &__title{
         margin-bottom: 4rem;
@@ -388,10 +569,21 @@ img {
         left:0;
         bottom: 0;
         z-index: -1;
+        @include bp($point_4){
+            display: none;
+        }
     }
     &__v::after{
         margin-left: 6rem;
         position: absolute;
-        content:url(../i/img-strawberry-video.png)
+        content:url(../i/img-strawberry-video.png);
+        @include bp($point_1400){
+            margin-left: -6rem;    
+        }
+        @include bp($point_3){
+            display: none; 
+        }
+      
     }
+   
 } 

@@ -43,6 +43,9 @@
 	align-items: center;
 }
 .logo-icon{
+	@include bp($point_2){
+		margin-left: 8rem;
+	}
 	&__img{
 		margin-right: 4.3rem;
 	}
@@ -105,6 +108,12 @@
 		top: 1rem;
 		right: 1rem;
 		z-index: -1;
+		@include bp($point_2){
+           top:30%;
+        }
+		@include bp($point_6){
+			top:38%;
+		 }
 	}
 	.navbar {
 	  opacity: 1;
@@ -119,6 +128,9 @@
 	  display: block;
 	  position: relative;
 	  height: 6.4rem;
+	  @include bp($point_2){
+		height: 8.4rem;
+	}
 	}
   
 	.navbar-container input[type="checkbox"] {
@@ -181,6 +193,9 @@
 	//   padding-left: 50px;
 	  transition: transform 0.5s ease-in-out;
 	  box-shadow: 5px 0px 10px 0px #aaa;
+	  @include bp($point_2){
+		margin-top: -10rem;
+	}
 	}
 	.menu-toggle-open{
 		margin-left: -300px;
@@ -191,6 +206,10 @@
 	  font-size: 1.3rem;
 	  font-weight: 500;
 	  color:#000;
+	  @include bp($point_2){
+		margin-left: 5rem;
+		padding-right: 4rem;
+	}
 	}
 	.menu-items a {
 		color:#000;
@@ -216,3 +235,15 @@
 	  transform: rotate(-35deg);
 	}
   }  
+  .contact-box__messanger{
+	@include bp($point_4){
+		display: none;
+	}
+  }
+  .contact-box__messanger-mobile{
+	display: none;
+	@include bp($point_4){
+		display: flex;
+		margin-left: 2rem;
+	}
+  }

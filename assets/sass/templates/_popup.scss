@@ -5,10 +5,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius:2rem;
-    padding: 10px; 
+    padding: 4rem 6rem 4rem 6rem;
     z-index: 20;
     background-color: #fff;
     display: none;
+    max-width: 900px;
+    @include bp($point_4){
+        padding: 3rem 4rem 3rem 4rem;
+    }
+    @include bp($point_6){
+        padding: 3rem;
+    }
+    // height: 762px;
     &__body{
         // position: fixed;
         // top: 50%;
@@ -29,6 +37,12 @@
     &__row{
         margin-top: 5rem;
         display: flex;
+        @include bp($point_4){
+            flex-wrap: wrap;
+        }
+        @include bp($point_4){
+            margin-top: 3rem;
+        }
     }
     &__col-slide {
         position: relative;
@@ -53,8 +67,11 @@
         font-family: $font_2;
     }
     &__col-info {
-
-        margin-left: 5rem;
+        margin-left: 8.5rem;
+        @include bp($point_4){
+            margin-top: 5rem;
+            margin-left: 0rem;
+        }
     }
     &__btn{
         margin-top: 4.4rem;
@@ -87,6 +104,9 @@
         margin-bottom: 2rem;
     }
     &__box{
+        padding-right: 10px;
+        height: 100px;
+        overflow-y: scroll;
         font-size: 1.8rem;
         font-family: $font_2;
     }
@@ -103,6 +123,7 @@
         margin: 0 auto;
         width: 54.4rem;
         border-radius:2rem;
+        display: none;
     }
     &__overflow{
         position: absolute;
@@ -206,4 +227,74 @@
 .modal.is-show,
 .overlay.is-show{
    display: block;
+}
+
+.modal__slide {
+    position:relative;
+    }
+.modal__slide div img{
+    position: absolute;
+    margin: auto;
+    // left: 0;
+    // top: 0;
+    // bottom: 0;
+    // right: 0;
+    }
+
+
+.slick-track{
+    width: 371px !important;
+}
+.modal__slide div{
+    width: 371px;
+    // height: 100%;
+    height: 250px;
+
+}
+.slick-track{
+    display: flex !important;
+//     transform: (translate3d(0px, 0px, 0px)) !important;
+// }
+}
+
+.slick-dots li{
+    width: 7px !important;
+    height: 7px !important;
+    background-color:#D9D9D9;
+    border-radius:50px;
+}
+
+li.slick-active {
+    background-color:#18B60C !important;
+    border-radius:50px;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 45%;
+  height: 15px;
+  width: 8px;
+  z-index: 1;
+  cursor: pointer;
+  right: 104%;
+}
+.next {
+  right: -20px;
+
+}
+.slick-dotted.slick-slider{
+    margin-bottom: 0px !important;
+}
+
+.row-desc__box::-webkit-scrollbar {
+    width: 3px; 
+ }
+
+ .row-desc__box::-webkit-scrollbar-track {
+  background-color: #D9D9D9
+}
+
+.row-desc__box::-webkit-scrollbar-thumb {
+  background: #18B60C;
+  border-radius: 25px;
 }
